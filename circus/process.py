@@ -65,7 +65,9 @@ def get_cpu_percent(proc, **kw):
 
 def get_memory_percent(proc):
     try:
-        return proc.memory_percent()
+        x = proc.memory_percent()
+        print("GOT:", x)
+        return x
     except AttributeError:
         return proc.get_memory_percent()
 
