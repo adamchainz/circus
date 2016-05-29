@@ -138,6 +138,10 @@ class ResourceWatcher(BaseObserver):
         if self.max_mem is not None:
             over_percent = (self._max_percent and
                             stats['max_mem'] > self.max_mem)
+            print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+            print("MAX_MEM %", self.max_mem)
+            print("MAX_MEM VALUE", stats['max_mem'])
+            print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
             over_value = (not self._max_percent and
                           stats['max_mem_abs'] > self.max_mem)
 
