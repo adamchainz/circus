@@ -86,6 +86,7 @@ class ResourceWatcher(BaseObserver):
         mems_abs = []
 
         for sub_info in stats.values():
+            print(sub_info)
             if isinstance(sub_info, dict):
                 cpus.append(100 if sub_info['cpu'] == 'N/A' else
                             float(sub_info['cpu']))
